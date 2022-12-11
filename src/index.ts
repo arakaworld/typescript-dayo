@@ -2,4 +2,6 @@ function hello(name: string): string {
     return `Hello, ${name}!`;
 }
 
-console.log(hello("TypeScript"));
+function consoleLogWrapper(text: string): void {
+    console.log(text)
+}

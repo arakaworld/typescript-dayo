@@ -9,6 +9,7 @@
     "dev:watch": "ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist/*",
     "tsc": "tsc",
+    "tsc:watch": "tsc -w",
     "build": "npm-run-all clean tsc",
     "start": "node ."
   },
