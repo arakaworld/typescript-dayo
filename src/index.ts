@@ -1,7 +1,5 @@
-function hello(name: string): string {
-    return `Hello, ${name}!`;
-}
+import { DayState } from './state/impl/DayState'
 
-function consoleLogWrapper(text: string): void {
-    console.log(text)
-}
+const a: DayState = DayState.getInstance()
+
+console.log(a.testdayo())
