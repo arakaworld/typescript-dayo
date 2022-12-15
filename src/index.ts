@@ -1,5 +1,11 @@
-import { DayState } from './state/impl/DayState'
+import Safe from "./state/impl/contexts"
 
-const a: DayState = DayState.getInstance()
+export const stateContext = new Safe();
+stateContext.setClock(0);
 
-console.log(a.testdayo())
+let hour = 1;
+setInterval(() => {
+    stateContext.setClock(hour);
+    hour++;
+    hour = hour === 24 ? 0 : hour;
+}, 1000);
