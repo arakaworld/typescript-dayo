@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="module">
-        import { stateContext } from "./dist/index.js"
+    <script type="module" src="./dist/index.js">
+        // import { stateContext } from "./dist/index.js"
 
         // todo
         // これでいけるはずなのに…
@@ -15,6 +15,10 @@
         // …が発生してHTML側で関数が呼び出せない😢
         // import/exportが上手くいってない？
         window.stateContext = stateContext;
+    </script>
+    <script>
+        console.log(stateContext)
+        console.log(window.stateContext)
     </script>
 
     <title>🔐Safe</title>
